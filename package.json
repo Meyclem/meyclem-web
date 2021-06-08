@@ -1,0 +1,93 @@
+{
+  "name": "next-ts-boilerplate",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "lint": "eslint --ext ts . --fix",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.1",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.1",
+    "typescript": "4.3.2"
+  },
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "prettier",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "prettier",
+      "import",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": false
+          },
+          "newlines-between": "always",
+          "groups": [
+            ["builtin", "external"],
+            ["internal", "parent", "sibling", "index"]
+          ]
+        }
+      ],
+      "import/group-exports": "error",
+      "import/exports-last": "error",
+      "prettier/prettier": [
+        "error",
+        {
+          "arrowParens": "always",
+          "trailingComma": "all"
+        }
+      ],
+      "comma-dangle": ["error", "always-multiline"],
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error", { "argsIgnorePattern": "^_" }
+      ],
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        { "allowExpressions": true }
+      ],
+      "react/prop-types": 0
+    },
+    "settings": {
+      "react": { "version": "detect" }
+    }
+  }
+}
