@@ -11,7 +11,8 @@
   "dependencies": {
     "next": "^10.2.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.1.4"
   },
   "devDependencies": {
     "@types/node": "^15.12.1",
@@ -19,11 +20,14 @@
     "@types/react-dom": "^17.0.6",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
+    "autoprefixer": "^10.2.6",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "postcss": "^8.3.0",
+    "postcss-nested": "^5.0.5",
     "prettier": "^2.3.1",
     "typescript": "4.3.2"
   },
@@ -41,6 +45,10 @@
       "es6": true,
       "node": true
     },
+    "ignorePatterns": [
+      "*.js",
+      "functions"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaVersion": 2020,
@@ -61,8 +69,16 @@
           },
           "newlines-between": "always",
           "groups": [
-            ["builtin", "external"],
-            ["internal", "parent", "sibling", "index"]
+            [
+              "builtin",
+              "external"
+            ],
+            [
+              "internal",
+              "parent",
+              "sibling",
+              "index"
+            ]
           ]
         }
       ],
@@ -75,19 +91,29 @@
           "trailingComma": "all"
         }
       ],
-      "comma-dangle": ["error", "always-multiline"],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
       "@typescript-eslint/camelcase": "off",
       "@typescript-eslint/no-unused-vars": [
-        "error", { "argsIgnorePattern": "^_" }
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
       ],
       "@typescript-eslint/explicit-function-return-type": [
         "error",
-        { "allowExpressions": true }
+        {
+          "allowExpressions": true
+        }
       ],
       "react/prop-types": 0
     },
     "settings": {
-      "react": { "version": "detect" }
+      "react": {
+        "version": "detect"
+      }
     }
   }
 }
