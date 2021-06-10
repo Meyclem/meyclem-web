@@ -1,36 +1,44 @@
-import { GetStaticPropsResult } from "next";
+import { Deck } from "@components/Deck";
+import { useEffect } from "react";
 
-type Cv = { experiences: string[] };
+const Index = (): JSX.Element => {
+  useEffect(() => {
+    import("reveal.js")
+      .then((pkg) => pkg.default)
+      .then((Reveal) => new Reveal().initialize({ embedded: true }));
+  }, []);
 
-const Index = ({ experiences }: Cv): JSX.Element => (
-  <>
-    <h1 className="text-pink-400">Clem</h1>
-    <div className="w-1/2 mx-auto">
-      {experiences.map((xp, index) => (
-        <section
-          key={xp}
-          className={`border w-1/2 ${
-            index % 2 === 0 ? "ml-auto text-left" : "mr-auto text-right"
-          }`}
-        >
-          <p>{xp}</p>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            asperiores voluptatem alias nostrum voluptate rem ut consequatur
-            vitae minus. Ducimus dolorem, non dolores magnam necessitatibus
-            velit tempore a cupiditate odio.
+  return (
+    <Deck>
+      <section>
+        <div className="flex items-center justify-center">
+          <div>
+            <p className="font-bold">
+              Hi! I'm <span className="text-pink-400">Clement</span>
+            </p>
+            <p>Fullstack web developer</p>
+          </div>
+          <img
+            className="rounded-full w-32 h-32"
+            src="https://avatars.githubusercontent.com/u/29123047?v=4"
+            alt=""
+          />
+        </div>
+      </section>
+      <section>
+        <div className="flex items-center justify-center">
+          <img
+            className="rounded-full w-32 h-32"
+            src="https://avatars.githubusercontent.com/u/29123047?v=4"
+            alt=""
+          />
+          <p className="font-bold">
+            Hi! I'm <span className="fragment text-pink-400">still there</span>
           </p>
-        </section>
-      ))}
-    </div>
-  </>
-);
+        </div>
+      </section>
+    </Deck>
+  );
+};
 
 export default Index;
-
-export async function getStaticProps(): Promise<GetStaticPropsResult<Cv>> {
-  return {
-    props: { experiences: new Array(10).fill("job") },
-  };
-}
