@@ -5,7 +5,7 @@ const Experiences: React.FC = () => {
   useEffect(() => {
     import("reveal.js")
       .then((pkg) => pkg.default)
-      .then((Reveal) => new Reveal().initialize({ embedded: true }));
+      .then((Reveal) => new Reveal().initialize({ embedded: false }));
   }, []);
 
   return (
