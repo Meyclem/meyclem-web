@@ -15,7 +15,7 @@ const navbarHeight = "80px";
 const Navbar: React.FC<NavbarProps> = ({ mainLinks }) => {
   return (
     <nav
-      className="container mx-auto pt-4 flex justify-between"
+      className="container mx-auto pt-4 flex justify-between px-2 sm:px-0"
       style={{ height: navbarHeight }}
     >
       <img
