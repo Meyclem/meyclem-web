@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
+import Div100vh from "react-div-100vh";
 
 type Props = {
   children?: ReactNode;
@@ -17,7 +18,7 @@ export const Layout = ({
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      {children}
+      <Div100vh className="flex flex-col justify-between">{children}</Div100vh>
     </div>
   );
 };
