@@ -2667,11 +2667,6 @@ raw-body@2.4.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-div-100vh@^0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/react-div-100vh/-/react-div-100vh-0.6.0.tgz#577972d8ac17693edcd44061c1a4b5a7578e49ec"
-  integrity sha512-ErV0VTNXUd8jZqofC0ExZr5u+XDD2kN2te4SbwtqsyTm0UOjVYu53kP+FalGQrTe+DoMG8VYR2dITcAFu7c/5w==
-
 react-dom@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
@@ -2801,11 +2796,6 @@ reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
-
-reveal.js@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-4.1.1.tgz#4a7c70377cf320e28672db103de1513179f19f41"
-  integrity sha512-Ol+/3LF4sZKQQOaG7/Jsa7t5Kix1I+dx9UEYL8mOOn2sWROtLcbI3AGHZbNQPWeuvnQ/y1R3MJ0vN9ZI5nBPUg==
 
 rimraf@^3.0.2:
   version "3.0.2"

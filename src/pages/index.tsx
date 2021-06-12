@@ -1,43 +1,94 @@
-import { Deck } from "@components/Deck";
-import { useEffect } from "react";
+import { Layout } from "@components/layout";
 
 const Index = (): JSX.Element => {
-  useEffect(() => {
-    import("reveal.js")
-      .then((pkg) => pkg.default)
-      .then((Reveal) => new Reveal().initialize({ embedded: true }));
-  }, []);
-
   return (
-    <Deck>
-      <section>
-        <div className="flex items-center justify-center">
-          <div>
-            <p className="font-bold">
-              Hi! I'm <span className="text-pink-400">Clement</span>
-            </p>
-            <p>Fullstack web developer</p>
-          </div>
-          <img
-            className="rounded-full w-32 h-32"
-            src="https://avatars.githubusercontent.com/u/29123047?v=4"
-            alt=""
-          />
-        </div>
-      </section>
-      <section>
-        <div className="flex items-center justify-center">
-          <img
-            className="rounded-full w-32 h-32"
-            src="https://avatars.githubusercontent.com/u/29123047?v=4"
-            alt=""
-          />
+    <Layout title="About">
+      <div className="container mx-auto">
+        <div>
           <p className="font-bold">
-            Hi! I'm <span className="fragment text-pink-400">still there</span>
+            Hi! I'm <span className="text-pink-400">Clement</span>
+          </p>
+          <p>Fullstack web developer</p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
+          </p>
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+            dicta ipsum. Praesentium temporibus quo debitis, placeat accusantium
+            tempora eligendi reprehenderit molestiae rerum ut? Harum quidem
+            magnam ad a. Aliquam, omnis!
           </p>
         </div>
-      </section>
-    </Deck>
+        <img
+          className="rounded-full w-32 h-32"
+          src="https://avatars.githubusercontent.com/u/29123047?v=4"
+          alt=""
+        />
+      </div>
+    </Layout>
   );
 };
 
