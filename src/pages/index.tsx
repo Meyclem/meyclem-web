@@ -1,43 +1,24 @@
-import { Deck } from "@components/Deck";
-import { useEffect } from "react";
+import { Layout } from "@components/layout";
 
 const Index = (): JSX.Element => {
-  useEffect(() => {
-    import("reveal.js")
-      .then((pkg) => pkg.default)
-      .then((Reveal) => new Reveal().initialize({ embedded: true }));
-  }, []);
-
   return (
-    <Deck>
-      <section>
-        <div className="flex items-center justify-center">
+    <Layout title="About">
+      <div className="container mx-auto">
+        <div className="flex items-center h-72 justify-center">
+          <img
+            className="rounded-full w-32 h-32 mr-16"
+            src="https://avatars.githubusercontent.com/u/29123047?v=4"
+            alt="Clement's picture"
+          />
           <div>
-            <p className="font-bold">
+            <h1 className="font-bold text-3xl">
               Hi! I'm <span className="text-pink-400">Clement</span>
-            </p>
-            <p>Fullstack web developer</p>
+            </h1>
+            <h2 className="font-semibold text-xl">Fullstack web developer</h2>
           </div>
-          <img
-            className="rounded-full w-32 h-32"
-            src="https://avatars.githubusercontent.com/u/29123047?v=4"
-            alt=""
-          />
         </div>
-      </section>
-      <section>
-        <div className="flex items-center justify-center">
-          <img
-            className="rounded-full w-32 h-32"
-            src="https://avatars.githubusercontent.com/u/29123047?v=4"
-            alt=""
-          />
-          <p className="font-bold">
-            Hi! I'm <span className="fragment text-pink-400">still there</span>
-          </p>
-        </div>
-      </section>
-    </Deck>
+      </div>
+    </Layout>
   );
 };
 

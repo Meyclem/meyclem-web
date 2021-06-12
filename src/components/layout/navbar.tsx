@@ -6,27 +6,26 @@ type NavbarLink = {
 };
 
 type NavbarProps = {
-  mainLinks: NavbarLink[];
   subLinks?: NavbarLink[];
 };
 
-const navbarHeight = "80px";
+const navbarHeight = "60px";
 
-const Navbar: React.FC<NavbarProps> = ({ mainLinks }) => {
+const mainLinks: NavbarLink[] = [
+  { title: "About", href: "/" },
+  { title: "Experiences", href: "/experiences" },
+];
+
+const Navbar: React.FC<NavbarProps> = () => {
   return (
     <nav
-      className="container mx-auto pt-4 flex justify-between px-2 sm:px-0"
+      className="w-full flex justify-center pt-2 bg-white bg-opacity-90 fixed"
       style={{ height: navbarHeight }}
     >
-      <img
-        className="rounded-full h-14 w-14"
-        src="https://avatars.githubusercontent.com/u/29123047?v=4"
-        alt="Clement's picture"
-      />
       {mainLinks &&
         mainLinks.map(({ title, href }) => (
           <Link href={href} key={title.toLowerCase().replace(" ", "-")}>
-            <a>{title}</a>
+            <a className="pr-4 last:pr-0">{title}</a>
           </Link>
         ))}
     </nav>
