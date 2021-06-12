@@ -1,5 +1,14 @@
 import { Layout } from "@components/layout";
 
+const contacts = [
+  { title: "github", href: "https://github.com/meyclem" },
+  {
+    title: "linkedin",
+    href: "https://www.linkedin.com/in/clement-meyer-2715b554/",
+  },
+  { title: "email", href: "mailto:meyclem@gmail.com" },
+];
+
 const Index = (): JSX.Element => {
   return (
     <Layout title="About">
@@ -11,10 +20,23 @@ const Index = (): JSX.Element => {
             alt="Clement's picture"
           />
           <div>
-            <h1 className="font-bold text-3xl">
+            <h1 className="font-bold text-3xl mb-6">
               Hi! I'm <span className="text-pink-400">Clement</span>
             </h1>
-            <h2 className="font-semibold text-xl">Fullstack web developer</h2>
+            <h2 className="font-semibold text-xl mb-4">
+              Fullstack web developer
+            </h2>
+            <div className="flex opacity-50">
+              {contacts.map((contact) => (
+                <a href={contact.href} target="blank" key={contact.title}>
+                  <img
+                    src={`/images/${contact.title}.svg`}
+                    className="h-6 w-6 mr-2 last:mr-0"
+                    alt={`${contact.title} icon`}
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
